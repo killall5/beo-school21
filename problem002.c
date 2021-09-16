@@ -50,7 +50,6 @@ void input(int **matrix, int *n, int *m) {
     scanf("%d %d", n, m);
     int *res = malloc((*n)*(*m)*sizeof(int));
 
-    int x;
     for (int i = 0; i < (*n)*(*m); i++) {
         scanf("%d", &res[i]);
     }
