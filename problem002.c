@@ -113,31 +113,31 @@ void sort_spiral(int *matrix, int n, int m, int **result_matrix) {
 
     int row = (n-1)/2, col = (m-1)/2;
     int i = 0;
-    int step = 0;
+    int radius = 0;
     res[row*m + col] = matrix[i++];
     while (i < n*m) {
-        step++;
+        radius++;
         // right
-        for (int s = 0; s < step; s++) {
+        for (int s = 0; s < radius; s++) {
             col++;
             if (0 <= col && col < m && 0 <= row && row < n) res[row*m + col] = matrix[i++];
         }
 
         // down
-        for (int s = 0; s < step; s++) {
+        for (int s = 0; s < radius; s++) {
             row++;
             if (0 <= col && col < m && 0 <= row && row < n) res[row*m + col] = matrix[i++];
         }
 
-        step++;
+        radius++;
         // left
-        for (int s = 0; s < step; s++) {
+        for (int s = 0; s < radius; s++) {
             col--;
             if (0 <= col && col < m && 0 <= row && row < n) res[row*m + col] = matrix[i++];
         }
 
         // up
-        for (int s = 0; s < step; s++) {
+        for (int s = 0; s < radius; s++) {
             row--;
             if (0 <= col && col < m && 0 <= row && row < n) res[row*m + col] = matrix[i++];
         }
