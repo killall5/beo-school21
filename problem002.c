@@ -111,7 +111,6 @@ void sort_vertical(int *matrix, int n, int m, int **result_matrix) {
 
 void sort_spiral(int *matrix, int n, int m, int **result_matrix) {
     int *res = malloc(n*m*sizeof(int));
-    memset(res, 0, n*m*sizeof(int));
 
     int row = (n-1)/2, col = (m-1)/2;
     int i = 0;
