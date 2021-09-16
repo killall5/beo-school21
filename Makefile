@@ -1,5 +1,6 @@
 .PHONY: all debug clean
 
+CFLAGS += -Werror
 SRC := $(wildcard *.c)
 BIN := $(SRC:.c=.exe)
 
